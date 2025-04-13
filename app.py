@@ -281,7 +281,7 @@ if st.button("🎯 Recommend") and selected_movie_name:
         for i in range(len(names)):
             with cols[i]:
                 if posters[i]:
-                    st.image(posters[i], use_column_width=True)
+                    st.image(posters[i], use_container_width=True)
                 else:
                     st.warning("🎞️ No poster available.")
                 st.markdown(f"<div><b>{names[i]}</b></div>", unsafe_allow_html=True)
