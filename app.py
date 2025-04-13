@@ -180,7 +180,9 @@ def fetch_movie_details(movie_id):
         return None, "No overview available.", "N/A", "N/A", "#"
     data = response.json()
     poster_path = data.get('poster_path')
+    print("Poster path:", poster_path)
     poster = f"https://image.tmdb.org/t/p/w500/{poster_path}" if poster_path else None
+    print("Poster URL:", poster)
     print("https://image.tmdb.org/t/p/w500/"+poster_path)
     official_link = f"https://www.themoviedb.org/movie/{movie_id}"
     return poster, data.get('overview', "No overview available."), data.get('release_date', "N/A"), data.get('vote_average', "N/A"), official_link
